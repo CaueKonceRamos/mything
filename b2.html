@@ -1,0 +1,359 @@
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Portfólio Profissional
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet"/>
+  <style>
+   .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+    .desktop-bg {
+      display: block;
+    }
+    .mobile-bg {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .desktop-bg {
+        display: none;
+      }
+      .mobile-bg {
+        display: block;
+      }
+    }
+    .mobile-menu {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .mobile-menu {
+        display: block;
+      }
+      .desktop-menu {
+        display: none;
+      }
+    }
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    .desktop-project-image {
+      display: block;
+    }
+    .mobile-project-image {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .desktop-project-image {
+        display: none;
+      }
+      .mobile-project-image {
+        display: block;
+      }
+    }
+  </style>
+ </head>
+ <body class="font-['Press_Start_2P'] bg-gray-100 relative">
+  <img alt="GIF animado de fundo com tema de video game para desktop" class="background desktop-bg" height="1080" src="https://i.pinimg.com/originals/55/4b/0c/554b0c1fa7871f49d1bc8c97a928c154.gif" width="1920"/>
+  <img alt="GIF animado de fundo com tema de video game para mobile" class="background mobile-bg" height="1080" src="https://media.giphy.com/media/1dJSM02LrEmgqegrpG/giphy.gif" width="1920"/>
+  <div class="relative z-10">
+   <header class="bg-[#0f232b] shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+     <h1 class="text-2xl font-bold text-white">
+      Meu Portfólio
+     </h1>
+     <nav class="desktop-menu">
+      <ul class="flex space-x-4">
+       <li class="tooltip">
+        <a class="text-white hover:text-gray-300" href="#inicio">
+         <i class="fas fa-home">
+         </i>
+         <span class="tooltiptext">
+          Início
+         </span>
+        </a>
+       </li>
+       <li class="tooltip">
+        <a class="text-white hover:text-gray-300" href="#servicos">
+         <i class="fas fa-tools">
+         </i>
+         <span class="tooltiptext">
+          Serviços
+         </span>
+        </a>
+       </li>
+       <li class="tooltip">
+        <a class="text-white hover:text-gray-300" href="#projetos">
+         <i class="fas fa-briefcase">
+         </i>
+         <span class="tooltiptext">
+          Projetos
+         </span>
+        </a>
+       </li>
+       <li class="tooltip">
+        <a class="text-white hover:text-gray-300" href="#curriculo">
+         <i class="fas fa-file-alt">
+         </i>
+         <span class="tooltiptext">
+          Currículo
+         </span>
+        </a>
+       </li>
+       <li class="tooltip">
+        <a class="text-white hover:text-gray-300" href="#contato">
+         <i class="fas fa-envelope">
+         </i>
+         <span class="tooltiptext">
+          Contato
+         </span>
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <div class="mobile-menu relative">
+      <button class="text-white focus:outline-none" id="menu-button">
+       <i class="fas fa-ellipsis-v">
+       </i>
+      </button>
+      <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden" id="menu-dropdown">
+       <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#inicio">
+        <i class="fas fa-home mr-2">
+        </i>
+        Início
+       </a>
+       <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#servicos">
+        <i class="fas fa-tools mr-2">
+        </i>
+        Serviços
+       </a>
+       <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#projetos">
+        <i class="fas fa-briefcase mr-2">
+        </i>
+        Projetos
+       </a>
+       <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#curriculo">
+        <i class="fas fa-file-alt mr-2">
+        </i>
+        Currículo
+       </a>
+       <a class="block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#contato">
+        <i class="fas fa-envelope mr-2">
+        </i>
+        Contato
+       </a>
+      </div>
+     </div>
+    </div>
+   </header>
+   <section class="container mx-auto px-4 py-16" id="inicio">
+    <div class="flex flex-col md:flex-row items-center">
+     <img alt="Foto profissional do desenvolvedor" class="w-48 h-48 rounded-full mb-4 md:mb-0 md:mr-6" height="300" src="https://storage.googleapis.com/a1aa/image/Qw7SuV5vw4p4LppZCEFDL0PQ7mO33wGUKTcjLE3mYJdCWfDKA.jpg" width="300"/>
+     <div>
+      <h2 class="text-3xl font-bold mb-2 text-white">
+       Sobre Mim
+      </h2>
+      <p class="text-white mb-4">
+       Olá! Me chamo Cauê Ramos, sou estudante de Ciências da Computação e apaixonado por tecnologia e inovação. Estou sempre em busca de aprender novas ferramentas, desenvolver soluções criativas e explorar os desafios do mundo da programação. Atualmente, foco meus estudos em desenvolvimento web, criação de aplicativos e inteligência artificial, mas estou aberto a novas oportunidades e conhecimentos.
+      </p>
+      <a class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" href="https://drive.google.com/file/d/1A2B3C4D5E6F7G8H9I0J1K2L3M4N5O6P7/view?usp=sharing">
+       Download CV
+      </a>
+     </div>
+    </div>
+   </section>
+   <section class="py-16" id="servicos">
+    <div class="container mx-auto px-4">
+     <h2 class="text-3xl font-bold mb-8 text-center text-white">
+      Serviços
+     </h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+       <h3 class="text-xl font-bold mb-2">
+        Desenvolvimento Web
+       </h3>
+       <p class="text-gray-700">
+        Criação de sites modernos, responsivos e otimizados para SEO, garantindo uma experiência intuitiva para os usuários. Desde páginas institucionais até sistemas personalizados, entrego soluções eficientes e focadas nas necessidades do cliente.
+       </p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+       <h3 class="text-xl font-bold mb-2">
+        Desenvolvimento Mobile
+       </h3>
+       <p class="text-gray-700">
+        Desenvolvimento de aplicativos para Android e iOS, com design atrativo e funcionalidade impecável. Transformo ideias em aplicativos que proporcionam uma experiência única e conectam você ao seu público de forma direta.
+       </p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+       <h3 class="text-xl font-bold mb-2">
+        Consultoria Técnica
+       </h3>
+       <p class="text-gray-700">
+        Auxílio estratégico na escolha de tecnologias e ferramentas para o seu projeto. Com análises técnicas e recomendações personalizadas, ajudo a sua empresa a crescer e a alcançar os objetivos com soluções tecnológicas adequadas.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="container mx-auto px-4 py-16" id="projetos">
+    <h2 class="text-3xl font-bold mb-8 text-center text-white">
+     Projetos
+    </h2>
+    <div class="flex justify-center">
+     <div class="w-full md:w-2/3">
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md" id="project-container">
+       <img alt="Imagem do projeto 1 para desktop" class="w-full h-80 object-cover rounded-lg mb-4 desktop-project-image" height="400" id="project-image-desktop" src="https://storage.googleapis.com/a1aa/image/KV1em4DTSg05ZqfCeXTRgbTtMMNDnSknFl9A317wnkqbjJQoA.jpg" width="600"/>
+       <img alt="Imagem do projeto 1 para mobile" class="w-full h-80 object-cover rounded-lg mb-4 mobile-project-image" height="400" id="project-image-mobile" src="https://storage.googleapis.com/a1aa/image/s27e6TB5yb2RCyrrUswjSIA26jfvZ2fPVazJuV9TM6ZcjJQoA.jpg" width="600"/>
+       <h3 class="text-xl font-bold mb-2" id="project-title">
+        Projeto 1
+       </h3>
+       <p class="text-gray-700" id="project-description">
+        Descrição do projeto 1.
+       </p>
+      </div>
+      <div class="flex justify-between mt-4">
+       <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" id="prev-project">
+        Anterior
+       </button>
+       <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" id="next-project">
+        Próximo
+       </button>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="py-16" id="curriculo">
+    <div class="container mx-auto px-4 text-center">
+     <h2 class="text-3xl font-bold mb-8 text-white">
+      Currículo
+     </h2>
+     <a class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" href="https://drive.google.com/file/d/1A2B3C4D5E6F7G8H9I0J1K2L3M4N5O6P7/view?usp=sharing">
+      Download CV
+     </a>
+    </div>
+   </section>
+   <section class="container mx-auto px-4 py-16" id="contato">
+    <h2 class="text-3xl font-bold mb-8 text-center text-white">
+     Contato
+    </h2>
+    <div class="flex flex-col items-center">
+     <p class="text-white mb-4 text-center text-sm">
+      Email: contato.cauekonce@gmail.com
+     </p>
+     <p class="text-white mb-4 text-center text-sm">
+      Endereço: Salvador, Bahia
+     </p>
+     <div class="flex space-x-4">
+      <a class="text-gray-700 hover:text-gray-900" href="https://www.youtube.com">
+       <i class="fab fa-youtube fa-2x">
+       </i>
+      </a>
+      <a class="text-gray-700 hover:text-gray-900" href="https://www.linkedin.com/in/cau%C3%AA-ramos-valverde-3480a42a5">
+       <i class="fab fa-linkedin fa-2x">
+       </i>
+      </a>
+      <a class="text-gray-700 hover:text-gray-900" href="https://github.com/CaueKonceRamos">
+       <i class="fab fa-github fa-2x">
+       </i>
+      </a>
+      <a class="text-gray-700 hover:text-gray-900" href="https://www.instagram.com/crm.eternal">
+       <i class="fab fa-instagram fa-2x">
+       </i>
+      </a>
+     </div>
+    </div>
+   </section>
+   <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+     <p>
+      © 2025 Cauê Ramos. CRM PRODUCTION. Todos os direitos reservados.
+     </p>
+    </div>
+   </footer>
+  </div>
+  <script>
+   document.getElementById('menu-button').addEventListener('click', function() {
+      var menuDropdown = document.getElementById('menu-dropdown');
+      if (menuDropdown.classList.contains('hidden')) {
+        menuDropdown.classList.remove('hidden');
+      } else {
+        menuDropdown.classList.add('hidden');
+      }
+    });
+
+    const projects = [
+      {
+        title: "Projeto 1",
+        description: "Descrição do projeto 1.",
+        imageDesktop: "https://placehold.co/600x400?text=Projeto+1+Desktop",
+        imageMobile: "https://placehold.co/600x400?text=Projeto+1+Mobile"
+      },
+      {
+        title: "Projeto 2",
+        description: "Descrição do projeto 2.",
+        imageDesktop: "https://placehold.co/600x400?text=Projeto+2+Desktop",
+        imageMobile: "https://placehold.co/600x400?text=Projeto+2+Mobile"
+      },
+      {
+        title: "Projeto 3",
+        description: "Descrição do projeto 3.",
+        imageDesktop: "https://placehold.co/600x400?text=Projeto+3+Desktop",
+        imageMobile: "https://placehold.co/600x400?text=Projeto+3+Mobile"
+      }
+    ];
+
+    let currentProjectIndex = 0;
+
+    function updateProject() {
+      const project = projects[currentProjectIndex];
+      document.getElementById('project-title').innerText = project.title;
+      document.getElementById('project-description').innerText = project.description;
+      document.getElementById('project-image-desktop').src = project.imageDesktop;
+      document.getElementById('project-image-mobile').src = project.imageMobile;
+    }
+
+    document.getElementById('prev-project').addEventListener('click', function() {
+      currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
+      updateProject();
+    });
+
+    document.getElementById('next-project').addEventListener('click', function() {
+      currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+      updateProject();
+    });
+
+    updateProject();
+  </script>
+ </body>
+</html>
